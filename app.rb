@@ -10,7 +10,7 @@ end
 
 post('/success') do
   destination = params.fetch("destination")
-  place = Place.new("destination")
+  place = Place.new(destination)
   place.save
   erb(:success)
 end
