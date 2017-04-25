@@ -1,0 +1,12 @@
+<form action="/success" method="post">
+  <label for="destination">Destination</label>
+  <input id="destination" name="destination" type="text">
+  <button type="submit" class="btn">Add Place</button>
+</form>
+
+<p> Here are all the places you've been. Wow:</p>
+<ul>
+  <% @places.each() do |place| %>
+  <li><% place.destination()%></li>
+  <% end %>
+</ul>
